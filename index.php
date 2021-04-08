@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
     header('location: index.php');
     
-if (!empty($_GET) && isset($_GET['submit'])) 
+if (!empty($_POST) && isset($_POST['submit'])) 
 {
-    $data = array_map('trim', $_GET);
+    $data = array_map('trim', $_POST);
  
     // Déclaration des variables
     $name = $data['lastname'];
